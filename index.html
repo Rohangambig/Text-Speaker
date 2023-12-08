@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1 style="color:rgb(0, 0, 0);margin:20px ;">Text to speak</h1>
+    <h4 style="color:rgb(89, 85, 85);margin-left: 40px;">Bring any text that will convert into voice  faster and straightforward</h4>
+        <textarea  id="demo" cols="120" rows="35" style="resize: none;font-size: 14px;" placeholder="Enter your text"></textarea>
+        <div class="demo">
+        <button id="temp" title="Speak">Speak</button><br><br><br>
+        <button id="temp1" title="Pause here">Pause</button><br><br><br>
+        <button id="temp2" title="Resume">Resume</button><br><br><br>
+        <button id="temp3" title="cancel speak" >Cancel</button><br><br><br>
+       
+        <input type="button" onclick="myfunction()" value="Clear">
+    </div>
+        <script>
+            let text = document.querySelector("textarea") ;
+            let btn = document.getElementById("temp");
+            let btn1 = document.getElementById("temp1");
+            let btn2 = document.getElementById("temp2");
+            let btn3 = document.getElementById("temp3");
+            
+            btn.addEventListener("click",()=>
+            {
+                let utterance = new SpeechSynthesisUtterance(text.value);
+                speechSynthesis.speak(utterance);
+            });
+             btn1.addEventListener("click",()=>
+             {
+                speechSynthesis.pause();
+             });
+
+             btn2.addEventListener("click",()=>
+             {
+                speechSynthesis.resume();
+             });
+
+             btn3.addEventListener("click",()=>
+             {
+                speechSynthesis.cancel();
+             });
+            
+ 
+             function myfunction()
+             {
+                document.getElementById("demo").value = " ";
+             }
+        </script>
+</body>
+</html>

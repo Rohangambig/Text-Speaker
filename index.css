@@ -1,0 +1,54 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+body
+{
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: example ease-in 15s  infinite;
+}
+textarea
+{
+    margin: 30px 0px 0px 40px;
+    color: white;
+    background-color: rgb(32, 31, 31);
+}
+.demo
+{
+    margin-top: -570px;
+    margin-left: 1100px;
+}
+.demo button
+{
+    /* margin-top: 5px; */
+    font-size: 30px;
+    padding: 20px 40px;
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
+    border: 2px solid white;
+    background-image:linear-gradient(rgb(59, 37, 255),rgb(17, 5, 39)) ;
+ 
+    /* border: 2px solid rgb(8, 15, 15); */
+    box-shadow: 0px 0px 15px rgb(54, 57, 57);
+    animation: example 5s infinite;
+}
+.demo button:hover{
+    background-image:linear-gradient(rgb(43, 30, 154),rgb(0, 0, 0)) ;
+}
+input
+{
+    /* margin-top: 5px; */
+    font-size: 30px;
+    padding: 20px 40px;
+    border-radius: 8px;
+    color: rgb(255, 255, 255);
+    border: 2px solid white;
+    /* background-image:linear-gradient(rgb(255, 42, 255)) ; */
+    background-image:linear-gradient(rgb(59, 37, 255),rgb(17, 5, 39)) ;
+    animation: example 5s infinite;
+}
+input:hover{
+    background-image:linear-gradient(rgb(43, 30, 154),rgb(0, 0, 0)) ;
+}
